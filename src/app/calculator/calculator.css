@@ -10,6 +10,7 @@
     flex-direction: center;
     align-items: center;
     box-shadow: 10px 10px 0 0 rgb(112, 112, 255);
+    max-width: 100%;
 }
 
 .show {
