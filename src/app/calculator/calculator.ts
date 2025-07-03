@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calculator.html',
   styleUrl: './calculator.css'
 })
-export class Calculator implements OnInit {
+export class Calculator {
   combineNum: string = '';
   outputNum: string = '';
-
-  ngOnInit(): void {
-    // this.liveOutput();
-  }
 
   getInput(number: string){
     this.combineNum += number;
@@ -22,7 +18,7 @@ export class Calculator implements OnInit {
   }
 
   calculate() {
-    this.combineNum = eval(this.combineNum);
+    this.combineNum = eval(this.combineNum).toString();
     this.outputNum = this.combineNum;
   }
 
@@ -33,12 +29,12 @@ export class Calculator implements OnInit {
 
   delete() {
     if (this.combineNum == '') return;
-    const deleteNum = this.combineNum.split("");
+    const deleteNum = this.combineNum.split('');
     this.combineNum = '';
     for(let i = 0; i < deleteNum.length - 1; i++){
       this.combineNum += deleteNum[i];
     }
-    this.outputNum = this.combineNum;
+    this.liveOutput();
   }
 
   liveOutput() {
