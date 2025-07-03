@@ -1,26 +1,26 @@
 <div class="container">
     <div class="show">
-        <p>18 &times; 3 &plus; 8</p>
-        <span>62</span>
+        <!-- <p>18 &times; 3 &plus; 8</p> -->
+        <span>{{outputNum}}</span>
     </div>
     <div class="control">
         <button>C</button>
         <button class="spacial-btn">Delete</button>
-        <button>&divide;</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>&times;</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>&minus;</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>&plus;</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="spacial-btn">=</button>
+        <button (click)="getInput('/')">&divide;</button>
+        <button (click)="getInput('7')">7</button>
+        <button (click)="getInput('8')">8</button>
+        <button (click)="getInput('9')">9</button>
+        <button (click)="getInput('*')">&times;</button>
+        <button (click)="getInput('4')">4</button>
+        <button (click)="getInput('5')">5</button>
+        <button (click)="getInput('6')">6</button>
+        <button (click)="getInput('-')">&minus;</button>
+        <button (click)="getInput('1')">1</button>
+        <button (click)="getInput('2')">2</button>
+        <button (click)="getInput('3')">3</button>
+        <button (click)="getInput('+')">&plus;</button>
+        <button (click)="getInput('.')">.</button>
+        <button (click)="getInput('0')">0</button>
+        <button class="spacial-btn" (click)="calculate()">=</button>
     </div>
 </div>
