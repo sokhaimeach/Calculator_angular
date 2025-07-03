@@ -4,8 +4,8 @@
         <span>{{outputNum}}</span>
     </div>
     <div class="control">
-        <button>C</button>
-        <button class="spacial-btn">Delete</button>
+        <button (click)="reset()">C</button>
+        <button class="spacial-btn" (click)="delete()">Delete</button>
         <button (click)="getInput('/')">&divide;</button>
         <button (click)="getInput('7')">7</button>
         <button (click)="getInput('8')">8</button>
