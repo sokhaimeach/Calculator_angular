@@ -15,9 +15,11 @@ export class Calculator {
     this.combineNum += number;
     this.outputNum = this.combineNum;
     this.liveOutput();
+    this.playSound();
   }
 
   calculate() {
+    if (this.combineNum == '') return;
     this.combineNum = eval(this.combineNum).toString();
     this.outputNum = this.combineNum;
   }
@@ -48,4 +50,11 @@ export class Calculator {
       else this.outputNum += shownum[i];
     }
   }
+  playSound(){
+    const click = new Audio();
+    click.src = 'sound.mp3';
+    click.play();
+  }
 }
+
+
